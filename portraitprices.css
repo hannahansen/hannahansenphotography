@@ -124,83 +124,104 @@ nav {
     }
 }
 
-/* Banner */
-.gallery-banner {
-    background-image: url('images/5D0A1909.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 300px 0;
-    text-align: center;
-    letter-spacing: 2px;
-    font-size: 38px;
-    color: #ffffff;
-    text-shadow: 0 2px 4px rgba(31, 30, 30, 0.588);
-    margin-top: 0;
+/* General resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Gallery-banner button */
-.buttoninsta {
-    display: inline-block;
+body {
+    font-family: 'Cinzel', serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Prices Section */
+.prices-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    margin-top: 40px;
+}
+
+.portrait-offer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    width: 80%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portrait-offer img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.price-details {
+    width: 50%;
+    padding: 40px;
+}
+
+.price-details h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.price-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.price-details ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* body buttons */
+.button1 {
+    margin-top: 20px;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     font-weight: bold;
     border-radius: 25px;
-    border: 2px solid #989898;
-    color: #ffffff;
+    border: 2px solid #000;
+    color: #000;
     background-color: transparent;
     transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
 }
 
-.buttoninsta:hover,
-.buttoninsta:focus {
+.button1:hover,
+.button1:focus {
     color: #000000;
     background-color: #afcfc07d;
     text-decoration: none;
     outline: none;
 }
 
-@media (max-width: 768px) {
-    .gallery-banner a {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-.gallery-container {
-    text-align: center;
-}
-
-.gallery-container img {
-    display: block;
-    width: 50%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-}
-
-@media (max-width: 768px) {
-    .gallery-container {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-        align-items: center;
-    }
-    
-    .gallery-container img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
-}
-
 /* Connect */
 .connect-content {
-    background: #ffffff;
+    /* background: #ffffff; */
     color: #53605be1;
     padding: 50px 0;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .connect-content h2 {
@@ -224,7 +245,6 @@ nav {
     width: 40px;
     height: auto;
     margin-right: 10px;
-    margin-bottom: -50px;
 }
 
 @media (max-width: 768px) {
@@ -239,7 +259,11 @@ nav {
     background-color: #eef5f3;
     padding: 20px;
     text-align: center;
-    margin-top: 50px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .footer-content {
@@ -247,35 +271,29 @@ nav {
     color: #666;
 }
 
-.footer-content h2 {
-    text-align: center;
-    font-weight: 200;
-    color: #000;
-    font-size: 150%;
-}
-
-.footer-content1 {
-    text-align: left;
-    font-size: 90%;
-    color:#000000b4
-}
-
-.footer-content2 {
-    text-align: right;
-    font-size: 90%;
-    color:#000000b4
-}
-
+/* Mobile Adjustments */
 @media (max-width: 768px) {
-    .footer {
+    .portrait-offer {
         flex-direction: column;
-        text-align: center;
     }
 
-    .footer-content,
-    .footer-content2 {
-        margin: 5px 0;
+    .portrait-offer img, .price-details {
+        width: 100%;
+    }
+
+    .price-details {
+        padding: 20px;
+    }
+
+    header nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    header nav ul li a {
+        font-size: 16px;
+    }
+    .button1 {
+        margin-bottom: 20px;
     }
 }
-
-.top-header, .main-banner, .gallery-banner {font-family: 'Cinzel', Georgia, serif;}

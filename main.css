@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* menu button */
 #menu-toggle {
     display: none;
@@ -428,6 +432,7 @@ section {
     color: #53605be1;
     padding: 0px 0;
     text-align: center;
+    margin-bottom: -50px;
 }
 
 .connect-content h2 {
