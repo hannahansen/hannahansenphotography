@@ -1,3 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* menu button */
+#menu-toggle {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+.menu-button {
+    display: block;
+}
+
+#menu-toggle:checked + .menu-button span {
+    visibility: hidden;
+}
+
+#menu-toggle:checked + .menu-button + .menu {
+    display: block;
+}
+
+#menu-toggle:checked + .menu-button::after {
+    content: "X";
+    color: #333;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    visibility: visible;
+}
+
+/* overall header */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d7ffec7d;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.top-header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* navigation menu styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+body {
+    padding-top: 0px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navigation Bar */
+nav {
+    background: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Navigation Bar adjustments for mobile devices */
+@media (max-width: 768px) {
+    .top-header {
+        flex-direction: column;
+        padding: 20px 10px;
+        font-size: 5px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    .menu-button {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
 /* General resets */
 * {
     margin: 0;
@@ -9,44 +135,6 @@ body {
     font-family: 'Cinzel', serif;
     background-color: #f8f8f8;
     color: #333;
-}
-
-header {
-    background-color: #eef5f3;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 24px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-header h1 {
-    margin: 0;
-    font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
-    color: #333;
-}
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    transition: color 0.3s ease-in-out;
-}
-
-header nav ul li a:hover {
-    color: #000;
 }
 
 /* Prices Section */
@@ -99,19 +187,26 @@ header nav ul li a:hover {
     font-size: 1.1rem;
 }
 
-button {
-    padding: 12px 24px;
-    font-size: 18px;
-    color: #fff;
-    background-color: #333;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+/* body buttons */
+.button1 {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    border: 2px solid #000;
+    color: #000;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-button:hover {
-    background-color: #555;
+.button1:hover,
+.button1:focus {
+    color: #000000;
+    background-color: #afcfc07d;
+    text-decoration: none;
+    outline: none;
 }
 
 /* Footer */
@@ -148,5 +243,8 @@ button:hover {
 
     header nav ul li a {
         font-size: 16px;
+    }
+    .button1 {
+        margin-bottom: 20px;
     }
 }

@@ -459,6 +459,77 @@ section {
     }
 }
 
+/* Inquiry Section */
+.inquiry-section {
+    background-color: #eef5f3;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.inquiry-container {
+    background-color: #ffffff;
+    padding: 40px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.inquiry-section h2 {
+    color: #afcfc0;
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.inquiry-section p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form input:focus {
+    border-color: #afcfc07d;
+    outline: none;
+}
+
+.inquiry-btn {
+    background-color: #afcfc0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.inquiry-btn:hover {
+    background-color: #3c5d4d7d;
+}
+
+/* Success/Error Message */
+#inquiry-message {
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .inquiry-container {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
 /* Footer */
 .footer-content {
     background: #afcfc07d;
