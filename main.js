@@ -15,46 +15,89 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 function changeImageSource() {
-    const image = document.querySelector('.main-banner img');
-    if (window.matchMedia("(max-width: 768px)").matches) {
-        image.src = 'images/5G3A4524small.jpg'; // Path to the smaller image for mobile devices
-    } else {
-        image.src = 'images/5G3A4524.jpg'; // Path to the larger image for desktop
+    const video = document.querySelector('.main-banner video');
+    if (video) {  // Check if the element exists
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            video.src = 'images/Sequence 01_1_small.mp4';
+        } else {
+            video.src = 'images/Sequence 01_1.mp4';
+        }
     }
 }
 
-document.getElementById('inquiry-form').addEventListener('submit', function(event) {
-    event.preventDefault();  // Prevent the default form submission
 
-    // Send email via EmailJS or another service
-    emailjs.sendForm('hannahansenphotography', 'template_inquiry', this)
+// Initialize EmailJS
+(function(){
+    emailjs.init("ST_aM3HmS9Oq1D3Hf");  // Use your Public Key here
+})();
+
+// Function to format the phone number as 000-000-0000
+function formatPhoneNumber(value) {
+    // Remove all non-digit characters
+    value = value.replace(/\D/g, "");
+
+    // Format phone number in the form of 000-000-0000
+    if (value.length > 3 && value.length <= 6) {
+        return value.slice(0, 3) + "-" + value.slice(3);
+    } else if (value.length > 6) {
+        return value.slice(0, 3) + "-" + value.slice(3, 6) + "-" + value.slice(6, 10);
+    }
+    return value;
+}
+
+// Add an event listener for form submission
+document.getElementById('inquiry-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const phoneInput = document.querySelector("input[name='phone']");
+    const formattedPhone = formatPhoneNumber(phoneInput.value);
+
+    // Validate phone number format
+    const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
+    if (!phoneRegex.test(formattedPhone)) {
+        displayMessage("Invalid phone number. Please enter the number in the format 000-000-0000.", "error");
+        return;
+    }
+
+    // Update phone input field with the formatted value
+    phoneInput.value = formattedPhone;
+
+    // Send email via EmailJS
+    emailjs.sendForm('hannahansenphotography', 'template_k7a4rl5', this)
         .then(function() {
-            displayInquiryMessage("Your inquiry has been sent successfully!", "success");
-            document.getElementById('inquiry-form').reset();  // Reset the form
+            displayMessage("Your inquiry has been sent successfully!", "success");
+            document.getElementById('inquiry-form').reset(); // Reset the form
         }, function(error) {
-            displayInquiryMessage('Failed to send inquiry: ' + JSON.stringify(error), "error");
+            displayMessage('Failed to send inquiry: ' + JSON.stringify(error), "error");
         });
 });
 
-function displayInquiryMessage(message, type) {
-    const inquiryMessage = document.getElementById('inquiry-message');
-    inquiryMessage.style.display = 'block';  // Show the message
+// Display message function (for success and error messages)
+function displayMessage(message, type) {
+    const formMessage = document.getElementById('inquiry-message');
+    formMessage.style.display = 'block'; // Show the message
 
     // Change the color based on message type
     if (type === "success") {
-        inquiryMessage.style.color = 'green';
+        formMessage.style.color = 'green';
     } else if (type === "error") {
-        inquiryMessage.style.color = 'red';
+        formMessage.style.color = 'red';
     }
 
-    inquiryMessage.textContent = message;
+    // Set the message text
+    formMessage.textContent = message;
 
     // Hide the message after 5 seconds
     setTimeout(() => {
-        inquiryMessage.style.display = 'none';
+        formMessage.style.display = 'none';
     }, 5000);
 }
 
+// Automatically format phone number as the user types
+document.querySelector("input[name='phone']").addEventListener('input', function(event) {
+    const formattedPhone = formatPhoneNumber(event.target.value);
+    event.target.value = formattedPhone;
+});
 
 changeImageSource();
 window.addEventListener('resize', changeImageSource);
