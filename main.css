@@ -134,6 +134,7 @@ img {
     height: 500px; /* Adjust height as needed */
     text-align: center;
     color: #000;
+    margin-top: 65px;
 }
 
 #bannerVideo {
@@ -531,12 +532,16 @@ form input:focus {
 }
 
 /* Footer */
+.footer {
+    background-color: #eef5f3;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
 .footer-content {
-    background: #afcfc07d;
-    padding-bottom: 20px;
-    padding-top: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
+    font-size: 14px;
+    color: #666;
 }
 
 .footer-content h2 {
