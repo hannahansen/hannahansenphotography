@@ -142,10 +142,11 @@ nav {
 /* Services Container */
 .services-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Adjust based on number of services */
+    grid-template-columns: repeat(3, 1fr); /* Adjust based on the number of services */
     gap: 20px;
     padding: 40px;
     text-align: center;
+    margin-top: 40px;
 }
 
 .service-item {
