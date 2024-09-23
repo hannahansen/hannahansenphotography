@@ -164,37 +164,6 @@ img {
     padding: 0;
 }
 
-#bannerVideo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the video covers the area without distortion */
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    text-shadow: 0 2px 4px rgba(31, 30, 30, 0.588);
-    font-size: 38px;
-    letter-spacing: 2px;
-}
-
-@media (max-width: 768px) {
-    .video-overlay {
-        font-size: 18px;
-    }
-}
-
 .review-banner {
     background-image: url('images/5D0A1832.jpg');
     background-size: cover;
