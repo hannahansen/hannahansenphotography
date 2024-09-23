@@ -148,7 +148,7 @@ img {
     .main-banner {
         background-size: cover; /* Ensures the image covers the entire section on smaller screens */
         background-position: center; /* Center the image */
-        height: auto; /* Let the height adjust naturally to the content */
+        height: 20vh;
     }
 }
 
