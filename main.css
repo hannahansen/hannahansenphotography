@@ -45,7 +45,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #d7ffec7d;
+    background-color: #77867ebc;
     padding: 11px 20px;
     position: fixed;
     top: 0;
@@ -134,11 +134,14 @@ img {
 .main-banner {
     position: relative;
     overflow: hidden;
-    padding: 0; /* Adjust as needed */
-    height: 500px; /* Adjust height as needed */
+    padding: 0;
+    height: 97vh; /* Adjusts the height to fill the entire viewport height */
     text-align: center;
+    background-image: url('images/A49A8858.jpg');
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
     color: #000;
-    margin-top: 65px;
 }
 
 #bannerVideo {
@@ -288,7 +291,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #d7ffec55;
+    background-color: #77867e46;
     padding: 0px 0;
 }
 
@@ -467,7 +470,7 @@ section {
 
 /* Inquiry Section */
 .inquiry-section {
-    background-color: #eef5f3;
+    background-color: #77867e46;
     padding: 50px 0;
     text-align: center;
 }
@@ -482,7 +485,7 @@ section {
 }
 
 .inquiry-section h2 {
-    color: #afcfc0;
+    color: #77867ebf;
     font-family: 'Cinzel', serif;
     font-size: 1.8rem;
     margin-bottom: 20px;
@@ -502,12 +505,12 @@ form input {
 }
 
 form input:focus {
-    border-color: #afcfc07d;
+    border-color: #77867ebf;
     outline: none;
 }
 
 .inquiry-btn {
-    background-color: #afcfc0;
+    background-color: #77867ebf;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -519,7 +522,7 @@ form input:focus {
 }
 
 .inquiry-btn:hover {
-    background-color: #3c5d4d7d;
+    background-color: rgba(60, 93, 77, 0.715);
 }
 
 /* Success/Error Message */
@@ -538,7 +541,7 @@ form input:focus {
 
 /* Footer */
 .footer {
-    background-color: #eef5f3;
+    background-color: #77867e72;
     padding: 20px;
     text-align: center;
     margin-top: 50px;
