@@ -155,7 +155,7 @@ img {
     .main-banner {
         background-size: cover; /* Ensures the image covers the entire section on smaller screens */
         background-position: center; /* Center the image */
-        height: 45vh;
+        height: 65vh;
     }
 }
 
