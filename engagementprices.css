@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'cherolina';
+    src: url('fonts/cherolina/Cherolina.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -37,22 +44,23 @@
 }
 
 /* overall header */
+/* overall header */
 .top-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #77867e7d;
-    padding: 10px 20px;
+    background: linear-gradient(to bottom, #77867e, #77867e00);
+    padding: 11px 20px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .top-header h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 3rem;
+    font-family: 'cherolina', cursive;
 }
 
 /* navigation menu styling */
@@ -88,7 +96,7 @@ img {
 
 /* Navigation Bar */
 nav {
-    background: #fff;
+    background: #ffffff5e;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
