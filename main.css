@@ -135,13 +135,21 @@ img {
     position: relative;
     overflow: hidden;
     padding: 0;
-    height: 97vh; /* Adjusts the height to fill the entire viewport height */
+    height: 97vh; /* Keeps the height the same */
     text-align: center;
     background-image: url('images/A49A8858.jpg');
-    background-size: cover; /* Ensures the image covers the entire section */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover; /* Change this from 'contain' to 'cover' */
+    background-position: center;
+    background-repeat: no-repeat;
     color: #000;
+}
+
+@media (max-width: 768px) {
+    .main-banner {
+        background-size: cover; /* Ensures the image covers the entire section on smaller screens */
+        background-position: center; /* Center the image */
+        height: auto; /* Let the height adjust naturally to the content */
+    }
 }
 
 #bannerVideo {
