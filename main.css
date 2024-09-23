@@ -46,7 +46,7 @@ html {
     justify-content: space-between;
     align-items: center;
     background-color: #d7ffec7d;
-    padding: 10px 20px;
+    padding: 11px 20px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -62,7 +62,7 @@ html {
 /* Navigation Bar */
 nav {
     background: #fff;
-    padding: 10px 20px;
+    padding: 11px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
