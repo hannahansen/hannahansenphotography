@@ -97,9 +97,16 @@ body {
 /* Responsive Navigation Bar adjustments for mobile devices */
 @media (max-width: 768px) {
     .top-header {
-        flex-direction: column;
-        padding: 20px 10px;
-        font-size: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #77867ebc;
+        padding: 11px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     
     nav ul {
@@ -142,6 +149,14 @@ img {
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     color: #000;
+}
+
+@media (max-width: 768px) {
+    .main-banner {
+        background-size: cover; /* Ensures the image covers the entire section on smaller screens */
+        background-position: center; /* Center the image */
+        height: 45vh;
+    }
 }
 
 #bannerVideo {
