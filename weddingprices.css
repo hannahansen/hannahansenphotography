@@ -41,7 +41,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #d7ffec7d;
+    background-color: #77867e7d;
     padding: 10px 20px;
     position: fixed;
     top: 0;
@@ -210,7 +210,7 @@ body {
 .button1:hover,
 .button1:focus {
     color: #000000;
-    background-color: #afcfc07d;
+    background-color: #77867ebc;
     text-decoration: none;
     outline: none;
 }
@@ -256,7 +256,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #eef5f3;
+    background-color: #77867e72;
     padding: 20px;
     text-align: center;
     margin-top: 50px;
