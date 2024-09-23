@@ -111,10 +111,16 @@ body {
         padding: 0; /* Remove any padding */
     }
 
+    .top-header {
+        flex-direction: column;
+        padding: 20px 10px;
+        font-size: 5px;
+    }
+
     body, html {
         margin: 0;
         padding: 0;
-        height: 100%; /* Ensures the body and html also occupy the full height */
+        height: 100%;
     }
     
     nav ul {
