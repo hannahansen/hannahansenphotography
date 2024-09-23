@@ -102,18 +102,13 @@ body {
 
 /* Responsive Navigation Bar adjustments for mobile devices */
 @media (max-width: 768px) {
-    .top-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #77867ebc;
+    .main-banner {
+        background-size: cover; /* Ensures the image covers the entire section on smaller screens */
+        background-position: center; /* Center the image */
+        height: auto; /* Let the height adjust naturally to the content */
         padding: 11px 20px;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
+}
     
     nav ul {
         flex-direction: column;
