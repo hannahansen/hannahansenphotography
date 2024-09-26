@@ -165,16 +165,16 @@ nav {
     position: relative;
     background-size: cover;
     background-position: center;
-    height: 300px; /* You can adjust this height */
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none; /* Removes underline from links */
+    text-decoration: none;
     transition: transform 0.3s ease-in-out;
 }
 
 .service-item:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: scale(1.05);
 }
 
 .service-item h2 {
@@ -184,7 +184,7 @@ nav {
     right: 0;
     margin: 0;
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text */
+    background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     font-size: 24px;
     text-align: center;
@@ -193,17 +193,17 @@ nav {
 }
 
 .service-item:hover h2 {
-    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay on hover */
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
     .services-container {
-        grid-template-columns: 1fr; /* Single column on mobile */
+        grid-template-columns: 1fr;
     }
 
     .service-item {
-        height: 200px; /* Adjust height for mobile */
+        height: 200px;
     }
 }
 
