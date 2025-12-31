@@ -491,17 +491,26 @@ section {
     margin-bottom: 30px;
 }
 
-form input {
+form input,
+form textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-family: inherit;
 }
 
-form input:focus {
+form input:focus,
+form textarea:focus {
     border-color: #77867ebf;
     outline: none;
+}
+
+form textarea {
+    height: 58px;
+    resize: none;
+    overflow: hidden;
 }
 
 .inquiry-btn {
