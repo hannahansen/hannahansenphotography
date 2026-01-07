@@ -86,7 +86,12 @@ nav ul li a:hover {
 }
 
 body {
-    padding-top: 0px;
+    font-family: 'Cinzel', serif;
+    background-color: #f8f8f8;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 img {
@@ -244,9 +249,7 @@ body {
     outline: none;
 }
 
-/* Connect */
 .connect-content {
-    /* background: #ffffff; */
     color: #53605be1;
     padding: 50px 0;
     text-align: center;
@@ -283,13 +286,12 @@ body {
     }
 }
 
-/* Footer */
 .footer {
     background-color: #77867e72;
     padding: 20px;
     text-align: center;
     width: 100%;
-    margin: 0;
+    margin-top: auto;
     box-sizing: border-box;
 }
 
