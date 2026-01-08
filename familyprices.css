@@ -179,12 +179,19 @@ body {
 .price-details {
     width: 50%;
     padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .price-details h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
     font-size: 2.2rem;
     font-weight: 400;
     letter-spacing: 1px;
+    line-height: 1.1;
 }
 
 .price-details ul {
